@@ -1,0 +1,2 @@
+# Write your MySQL query statement below
+SELECT a.name FROM Employee AS a JOIN (SELECT managerId AS id, COUNT(*) AS reports FROM Employee WHERE managerId IS NOT NULL GROUP BY managerId) AS b ON a.id = b.id AND b.reports > 4
